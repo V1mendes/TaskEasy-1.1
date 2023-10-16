@@ -13,12 +13,12 @@ include_once("conexao.php");
     <!-- Seus estilos CSS aqui -->
 </head>
 
+<nav>
+    <a href="index.html" class="nav_title"> TASKEASY</a>
+</nav>
+
 <body>
-    <nav>
-        <ul class="nav_title">
-            <li>TASKEASY</li>
-        </ul>
-    </nav>
+
     <form action="inserir_tarefa.php" method="post" class="add_task">
         <input type="text" id="novaTarefa" name="descricao" placeholder="Digite uma nova tarefa" required>
         <button type="submit">Enviar</button>
@@ -29,22 +29,22 @@ include_once("conexao.php");
     <div class="conteiner">
         <ul class="task_list" id="listaTarefas">
 
-        <?php
-        $sql = "SELECT descricao FROM tarefas";
-        $resultado = $conexao->query($sql);
+            <?php
+            $sql = "SELECT descricao FROM tarefas";
+            $resultado = $conexao->query($sql);
 
-        // Verificar se a consulta foi bem-sucedida
-        if ($resultado->num_rows > 0) {
-            // Iterar sobre os resultados
-            while ($row = $resultado->fetch_assoc()) {
-                echo '<li>';
-                echo '<input type="checkbox" class="checkbox-tarefa">' . $row["descricao"] . "<br>";
-                echo '</li>';
+            // Verificar se a consulta foi bem-sucedida
+            if ($resultado->num_rows > 0) {
+                // Iterar sobre os resultados
+                while ($row = $resultado->fetch_assoc()) {
+                    echo '<li>';
+                    echo '<input type="checkbox" class="checkbox-tarefa">' . $row["descricao"] . "<br>";
+                    echo '</li>';
+                }
+            } else {
+                echo "Nenhum resultado encontrado.";
             }
-        } else {
-            echo "Nenhum resultado encontrado.";
-        }
-        ?>
+            ?>
 
         </ul>
     </div>

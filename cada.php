@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="assets/css/cadastro.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 </head>
 
 <body>
+
     <header>
         <a href="index.html" class="logo"> TASKEASY</a>
         <a href="login.html">Entrar</a>
     </header>
+
     <div id="campos" class="center">
+
         <h1>Cadastre-se</h1>
+
         <form action="cadastro.php" method="post">
 
             <label for="nome_completo">Nome Completo</label>
@@ -31,7 +34,9 @@
             <input type="password" name="senha" id="senha" required>
             <button type="submit" class="button button1" value="Enviar">Enviar</button>
             <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
+
         </form>
+        
     </div>
 
     <!-- <script>

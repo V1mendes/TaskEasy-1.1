@@ -1,0 +1,47 @@
+header {
+    background: #026873;
+    height: 80px;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+h1 {
+    padding-bottom: 40px;
+    padding-top: 80px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input {
+    height: 40px;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+}
+
+
+
+
