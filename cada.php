@@ -15,7 +15,7 @@
 
     <header>
         <a href="index.html" class="logo"> TASKEASY</a>
-        <a href="login.html">Entrar</a>
+        <a id="lgn" href="login.php">Entrar</a>
     </header>
 
     <div id="campos" class="center">
@@ -32,7 +32,9 @@
 
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" required>
+            <div>
             <button type="submit" class="button button1" value="Enviar">Enviar</button>
+            </div>
             <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
 
         </form>

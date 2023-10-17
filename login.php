@@ -13,7 +13,7 @@
 
     <header>
         <a href="index.html" class="logo"> TASKEASY</a>
-        <a href="cada.php">Cadastre-se</a>
+        <a id="lgn" href="cada.php">Cadastre-se</a>
     </header>
 
     <div id="campos" class="center">
@@ -27,9 +27,9 @@
 
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" required>
-
+            <div>
             <button type="submit" class="button button1" value="Entrar">Enviar</button>
-
+            </div>
 
         </form>
 
