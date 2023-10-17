@@ -1,11 +1,36 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 40px;
+    background: #026873;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-body {
-    background: #ffffff;
+.logo {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+
+}
+
+.navbar a {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 25px;
+    transition: .2s;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
     color: #000000;
 }
 
@@ -20,15 +45,15 @@ header {
     align-items: center;
 }
 
+p{
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
 h1 {
     margin-top: 80px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-top: 80px;
-}
-.esqueci{
-    color: rgb(241, 0, 0);
-    font-size: 16px;
-    
 }
 
 header a {
@@ -71,8 +96,8 @@ label{
     cursor: pointer;
     background-color: #026873;
     color: white;
+    margin-top: 20px;
     width: 50%;
-    margin: 10px;
     height: 40px;
     border: none;
     border-radius: 10px;

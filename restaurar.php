@@ -17,16 +17,16 @@ include_once("conexao.php");
 <body>
     <div>
         <header class="header">
-            <a href="#" class="logo"> logo</a>
+            <a href="index.html" class="logo"> TASKEASY</a>
 
             <nav class="navbar">
-                <a href="#" class="active"> entrar </a>
-                <a href="#"> cadastrar </a>
+                <a href="login.php"> Entrar </a>
+                <a href="cada.php"> Cadastrar </a>
             </nav>
         </header>
     </div>
 
-    <section class="home">
+    <div class="home">
 
         <div class="home-content">
 
@@ -34,26 +34,18 @@ include_once("conexao.php");
 
             <p> Para redefinir sua senha, por favor digite o endereço de email da sua conta </p>
 
-            <form method="post" action="reset.php">
+            <form class="center" method="post" action="reset.php">
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" required>
-                <button type="submit" value="enviar">Enviar</button>
+                <button class= "button1" type="submit" value="enviar">Recuperar</button>
             </form>
-           
 
-            <div class="btn-box">
-                <a href="#"> redefinir minha senha </a>
-            </div>
-
-            <div>class="btn-box">
-                <a href="#"> voltar ao login </a>
-            </div>
-
-            <div class="img_index">
+        </div>
+        <div class="img_index">
                 <img src="assets/img/img_restaurar.png" alt="imagem de redefinição">
             </div>
 
-    </section>
+    </div>
 
 
 </body>

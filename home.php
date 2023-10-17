@@ -38,7 +38,7 @@ include_once("conexao.php");
                 // Iterar sobre os resultados
                 while ($row = $resultado->fetch_assoc()) {
                     echo '<li>';
-                    echo '<input type="checkbox" class="checkbox-tarefa">' . $row["descricao"] . "<br>";
+                    echo '<input type="checkbox" class="checkbox-tarefa name="meu_checkbox[]" value= "valor_selecionado">' . $row["descricao"] . "<br>";
                     echo '</li>';
                 }
             } else {
@@ -46,7 +46,14 @@ include_once("conexao.php");
             }
             ?>
 
+            
         </ul>
+
+        <form action="excluir_tarefas.php" method="post">
+            <input type="submit" value="excluir">
+        </form>
+
+        
     </div>
 
 

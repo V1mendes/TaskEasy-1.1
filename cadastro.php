@@ -13,7 +13,7 @@ $sql2 = "INSERT INTO tarefas (descricao) VALUES ('$descricao')";
 
 
 if(mysqli_query($conexao, $sql)){
-    header("location: home.php");
+    header("location: login.php");
 }else{
     echo "Erro". mysqli_connect_error($conexao);
 }

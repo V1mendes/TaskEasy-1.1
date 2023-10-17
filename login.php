@@ -16,6 +16,7 @@
         <a id="lgn" href="cada.php">Cadastre-se</a>
     </header>
 
+
     <div id="campos" class="center">
 
         <h1>Login</h1>
@@ -27,11 +28,18 @@
 
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" required>
+
+            <a class="esqueci" href="restaurar.php">Esqueci minha senha</a>
+
             <div>
-            <button type="submit" class="button button1" value="Entrar">Enviar</button>
+            <button type="submit" class="button1" value="Entrar">Entrar</button>
             </div>
 
         </form>
+
+        
+
+    </div>
 
 </body>
 

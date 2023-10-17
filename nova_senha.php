@@ -4,23 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/nova_senha.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <title>TASKEASY</title>
 </head>
 
 <body>
 
-    <form action="proces_nova_senha.php" method="post">
+    <div>
+        <header class="header">
+            <a href="index.html" class="logo"> TASKEASY</a>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-        
-        <label for="senha">Senha</label>
-        <input type="password" name="nova_senha" id="nova_senha" required>
+            <nav class="navbar">
+                <a href="login.php"> Entrar </a>
+                <a href="cada.php"> Cadastrar </a>
+            </nav>
+        </header>
+    </div>
 
-        <button type="submit" class="button button1" value="Enviar">Enviar</button>
-        <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
+    <div id="campos" class="center">
 
-    </form>
+        <h1>Criar nova senha</h1>
+        <P>Preencha o primeiro campo com o email correspondente a troca de senha e modifique apenas a senha</P>
+
+        <form action="proces_nova_senha.php" method="post">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" name="nova_senha" id="nova_senha" required>
+
+            <div><button type="submit" class="button button1" value="Enviar">Enviar</button></div>
+            <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
+
+        </form>
+
+    </div>
 
 </body>
 
