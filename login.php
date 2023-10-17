@@ -20,7 +20,7 @@
 
         <h1>Login</h1>
 
-        <form action="" method="post">
+        <form action="validar_login.php" method="post">
 
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required>

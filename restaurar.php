@@ -1,3 +1,7 @@
+<?php
+include_once("conexao.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -28,9 +32,14 @@
 
             <H1> Esqueceu sua senha? </H1>
 
-            <P> Para redefinir sua senha, por favor <br>
-                digite o endereço de email da sua conta </P>
-            <br>
+            <p> Para redefinir sua senha, por favor digite o endereço de email da sua conta </p>
+
+            <form method="post" action="reset.php">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+                <button type="submit" value="enviar">Enviar</button>
+            </form>
+           
 
             <div class="btn-box">
                 <a href="#"> redefinir minha senha </a>
