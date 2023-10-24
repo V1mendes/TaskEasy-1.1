@@ -1,24 +1,20 @@
 <?php
-
 include("conexao.php");
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];
+$entrar = $_POST["entrar"];
 
-$sql = "SELECT * FROM cadastros WHERE email = '$email'";
-$result = $conexao->query($sql);
+if (isset($entrar)) {
+    $verifica = $conexao->query("SELECT * FROM cadastros WHERE email = '$email' AND senha = '$senha'") or die("Erro ao selecionar");
 
-$sql1 = "SELECT * FROM cadastros WHERE senha = '$senha'";
-$result1 = $conexao->query($sql1);
-
-if ($result != $email && $result1 != $senha) {
-
-    header("Location: home.php");
-
-} else {
-
-    echo "Email ou senha erradaestão errados";
+    if ($verifica->num_rows <= 0) {
+        echo "<script language='javascript' type='text/javascript'>
+        alert('Login e/ou senha incorretos');window.location.href='login.php';</script>";
+        die();
+    } else {
+        header("Location: home.php");
+    }
 }
-
-mysqli_close($conexao);
 ?>
+ 

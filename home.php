@@ -13,52 +13,38 @@ include_once("conexao.php");
     <!-- Seus estilos CSS aqui -->
 </head>
 
-<nav>
-    <a href="index.html" class="nav_title"> TASKEASY</a>
-</nav>
-
 <body>
+    <nav>
+        <a href="index.html" class="nav_title">TASKEASY</a>
+    </nav>
 
     <form action="inserir_tarefa.php" method="post" class="add_task">
-        <input type="text" id="novaTarefa" name="descricao" placeholder="Digite uma nova tarefa" required>
-        <button type="submit">Enviar</button>
-
-        <!-- <button id="adicionarBtn" type="button">Adicionar</button> -->
+        <input type="text" class="input_add" id="novaTarefa" name="descricao" placeholder="Digite uma nova tarefa" required>
+        <button type="submit">Adicionar</button>
     </form>
 
     <div class="conteiner">
-        <ul class="task_list" id="listaTarefas">
+        <form action="excluir_tarefas.php" method="post" name="del_task">
+            <ul class="task_list" id="listaTarefas">
+                <?php
+                $sql = "SELECT id, descricao FROM tarefas"; // Adicione o campo "id" à consulta SQL
+                $resultado = $conexao->query($sql);
 
-            <?php
-            $sql = "SELECT descricao FROM tarefas";
-            $resultado = $conexao->query($sql);
-
-            // Verificar se a consulta foi bem-sucedida
-            if ($resultado->num_rows > 0) {
-                // Iterar sobre os resultados
-                while ($row = $resultado->fetch_assoc()) {
-                    echo '<li>';
-                    echo '<input type="checkbox" class="checkbox-tarefa name="meu_checkbox[]" value= "valor_selecionado">' . $row["descricao"] . "<br>";
-                    echo '</li>';
+                // Verificar se a consulta foi bem-sucedida
+                if ($resultado->num_rows > 0) {
+                    // Iterar sobre os resultados
+                    while ($row = $resultado->fetch_assoc()) {
+                        echo '<li>';
+                        echo "<input type='checkbox' class='checkbox-tarefa' name='tarefas_id[]' value='" . $row["id"] . "'>" . $row["descricao"] . "<br>";
+                        echo '</li>';
+                    }
+                } else {
+                    echo "Nenhum resultado encontrado.";
                 }
-            } else {
-                echo "Nenhum resultado encontrado.";
-            }
-            ?>
-
-            
-        </ul>
-
-        <form action="excluir_tarefas.php" method="post">
-            <input type="submit" value="excluir">
+                ?>
+                <input type="submit" class="bt_excluir" value="Apagar tarefas selecionadas" name="deltask">
+            </ul>
         </form>
-
-        
     </div>
-
-
-
-
 </body>
-
 </html>

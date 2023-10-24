@@ -35,7 +35,7 @@
             <label for="senha">Senha</label>
             <input type="password" name="nova_senha" id="nova_senha" required>
 
-            <div><button type="submit" class="button button1" value="Enviar">Enviar</button></div>
+            <input type="submit" value="enviar" id="enviar" name="enviar" required>
             <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
 
         </form>

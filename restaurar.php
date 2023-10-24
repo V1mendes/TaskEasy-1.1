@@ -37,7 +37,7 @@ include_once("conexao.php");
             <form class="center" method="post" action="reset.php">
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" required>
-                <button class= "button1" type="submit" value="enviar">Recuperar</button>
+                <input type="submit" value="restaurar" id="rest" name="rest" required>
             </form>
 
         </div>

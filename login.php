@@ -31,9 +31,7 @@
 
             <a class="esqueci" href="restaurar.php">Esqueci minha senha</a>
 
-            <div>
-            <button type="submit" class="button1" value="Entrar">Entrar</button>
-            </div>
+            <input type="submit" class="bt_excluir" value="entrar" id="entrar" name="entrar" required>
 
         </form>
 

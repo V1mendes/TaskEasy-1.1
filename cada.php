@@ -32,10 +32,14 @@
 
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" required>
+            <a class="esqueci" href="login.php">Ja tenho uma conta TASKEASY</a>
             <div>
+
+            
+
             <button type="submit" class="button button1" value="Enviar">Enviar</button>
             </div>
-            <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
+            
 
         </form>
         
