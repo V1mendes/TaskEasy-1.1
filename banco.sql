@@ -15,3 +15,6 @@ CREATE TABLE tarefas (
 
 select * from cadastros;
 select * from tarefas;
+
+ALTER TABLE tarefas
+ADD user_id INT UNIQUE;

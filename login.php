@@ -1,3 +1,13 @@
+<?php
+include_once("conexao.php");
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: home.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -31,7 +41,8 @@
 
             <a class="esqueci" href="restaurar.php">Esqueci minha senha</a>
 
-            <input type="submit" class="bt_excluir" value="entrar" id="entrar" name="entrar" required>
+            <input type="submit" class="bt_excluir" value="Entrar" id="entrar" name="entrar">
+
 
         </form>
 

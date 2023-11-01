@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("conexao.php");
 
 $tarefas_id = $_POST["tarefas_id"]; // Agora você pode acessar diretamente o array
