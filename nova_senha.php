@@ -12,6 +12,7 @@
 <body>
 
     <div>
+
         <header class="header">
             <a href="index.html" class="logo"> TASKEASY</a>
 
@@ -19,12 +20,15 @@
                 <a href="login.php"> Entrar </a>
                 <a href="cada.php"> Cadastrar </a>
             </nav>
+
         </header>
+
     </div>
 
     <div id="campos" class="center">
 
         <h1>Criar nova senha</h1>
+        
         <P>Preencha o primeiro campo com o email correspondente a troca de senha e modifique apenas a senha</P>
 
         <form action="proces_nova_senha.php" method="post">
@@ -36,7 +40,6 @@
             <input type="password" name="nova_senha" id="nova_senha" required>
 
             <input type="submit" value="enviar" id="enviar" name="enviar" required>
-            <!-- <button id="Cadastro" class="button button1">Continuar</button> -->
 
         </form>
 

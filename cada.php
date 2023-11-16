@@ -40,23 +40,10 @@
             <button type="submit" class="button button1" value="Enviar">Enviar</button>
             </div>
             
-
         </form>
         
     </div>
 
-    <!-- <script>
-        document
-            .getElementById("eyeButton")
-            .addEventListener("click", function () {
-                var senhaInput = document.getElementById("senha");
-                if (senhaInput.type === "password") {
-                    senhaInput.type = "text";
-                } else {
-                    senhaInput.type = "password";
-                }
-            });
-    </script> -->
 </body>
 
 </html>

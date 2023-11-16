@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include_once("conexao.php");
 
@@ -6,6 +7,7 @@ if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
     header("Location: home.php");
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +19,12 @@ if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
     <title>TaskEasy</title>
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     
 </head>
 
 <body>
+
     <nav>
         
         <a href="index.html" class="nav_title">TASKEASY</a>
@@ -29,32 +33,46 @@ if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
     </nav>
 
     <form action="inserir_tarefa.php" method="post" class="add_task">
+
         <input type="text" class="input_add" id="novaTarefa" name="descricao" placeholder="Digite uma nova tarefa" required>
         <button type="submit">Adicionar</button>
+
     </form>
 
     <div class="conteiner">
+
         <form action="excluir_tarefas.php" method="post" name="del_task">
+
             <ul class="task_list" id="listaTarefas">
+
                 <?php
+
                 $sql = "SELECT id, descricao FROM tarefas WHERE user_id = {$_SESSION['user_id']}"; 
                 $resultado = $conexao->query($sql);
 
-                // Verificar se a consulta foi bem-sucedida
                 if ($resultado->num_rows > 0) {
-                    // Iterar sobre os resultados
+
                     while ($row = $resultado->fetch_assoc()) {
                         echo '<li>';
                         echo "<input type='checkbox' class='checkbox-tarefa' name='tarefas_id[]' value='" . $row["id"] . "'>" . $row["descricao"] . "<br>";
                         echo '</li>';
                     }
+
                 } else {
+
                     echo "Nenhum resultado encontrado.";
+
                 }
                 ?>
+
                 <input type="submit" class="bt_excluir" value="Apagar tarefas selecionadas" name="deltask" required>
+
             </ul>
+
         </form>
+
     </div>
+
 </body>
+
 </html>

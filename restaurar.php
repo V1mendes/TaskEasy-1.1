@@ -1,5 +1,7 @@
 <?php
+
 include_once("conexao.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -15,15 +17,20 @@ include_once("conexao.php");
 </head>
 
 <body>
+
     <div>
+
         <header class="header">
+
             <a href="index.html" class="logo"> TASKEASY</a>
 
             <nav class="navbar">
                 <a href="login.php"> Entrar </a>
                 <a href="cada.php"> Cadastrar </a>
             </nav>
+
         </header>
+
     </div>
 
     <div class="home">
@@ -35,18 +42,22 @@ include_once("conexao.php");
             <p> Para redefinir sua senha, por favor digite o endereço de email da sua conta </p>
 
             <form class="center" method="post" action="reset.php">
+
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" required>
                 <input type="submit" value="restaurar" id="rest" name="rest" required>
+
             </form>
 
         </div>
+
         <div class="img_index">
-                <img src="assets/img/img_restaurar.png" alt="imagem de redefinição">
-            </div>
+
+            <img src="assets/img/img_restaurar.png" alt="imagem de redefinição">
+
+        </div>
 
     </div>
-
 
 </body>
 
