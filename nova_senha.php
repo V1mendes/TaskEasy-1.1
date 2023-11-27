@@ -38,9 +38,9 @@
 
             <label for="senha">Senha</label>
             <input type="password" name="nova_senha" id="nova_senha" required>
-
-            <input type="submit" value="enviar" id="enviar" name="enviar" required>
-
+            <div class="caixa">
+            <button class="button1" type="submit" value="enviar" id="enviar" name="enviar" required>Enviar</button>
+            </div>
         </form>
 
     </div>

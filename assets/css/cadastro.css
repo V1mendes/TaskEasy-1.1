@@ -26,10 +26,6 @@ header a {
     font-weight: bold;
 }
 
-#lgn{
-    transition: 0.2s;
-}
-
 #lgn:hover{
     color: #000000;
     transition: 0.2s;
@@ -55,14 +51,14 @@ h1 {
 /*FORMULÁRIO*/
 
 form{
-    width: 40%;
+    width: 60%;
     display: flex;
     flex-direction: column;
 }
 a{
-    color: rgb(0, 0, 0);
+    color: rgb(16, 23, 225);
     font-size: 14px;
-    margin-bottom: 10px;
+    font-weight: bold;
     
 }
 
@@ -82,24 +78,19 @@ label{
     font-size: 14px;
 }
 
+/*BUTTON*/
+
 button{
     cursor: pointer;
-    background-color: #026873;
+    background-color: #2D83A6;
     color: white;
     width: 50%;
     margin: 10px;
     height: 40px;
     border: none;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 16px;
     transition: 0.2s background;
-}
-
-#Cadastro {
-    cursor: pointer;
-    margin-top: 20px;
-    width: 140px;
-    height: 35px;
 }
 
 #campos {
@@ -110,21 +101,37 @@ button{
     /* Centraliza horizontalmente o container #campos */
 }
 
-#eyeButton {
-    width: 20px;
-    height: 18px;
-    position: absolute;
-    top: 40%;
-    right: 30px;
-    background-image: url(./img/eye-solid-3.jpg);
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-}
-
-
 button:hover{
     background-color: #057986;
     transition: 0.2s background;
 }
 
+@media screen and (min-width: 1200px)  {
+    input{
+        width: 360px;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 800px)  {
+    input{
+        width: 250px;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+}
+@media screen and (max-width: 460px)  {
+        
+    .logo{
+        font-size: 20px;
+    }
+    header a{
+        font-size: 14px;
+    }
+    
+}

@@ -1,15 +1,15 @@
 
 nav{
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  background-color: #026873;
   height: 80px;
+  width: 100%;
+  padding: 40px;
+  background: #026873;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
 }
-nav{
-  gap:80%;
-}
+
 
 .nav_title{
   font-size:30px;
@@ -25,17 +25,18 @@ nav{
   font-size: 18px;
   color: white;
   font-weight: bold;
+  padding-right: 10;
 }
 
 .add_task{
-  
+  margin-top: 70px;
   padding:30px;
   text-align:center;
   list-style-type: none;
 
 }
 .add_task>input{
-  width: 400px;
+  width: 300px;
   height:40px;
   border-radius:10px;
   padding: 10px;
@@ -95,6 +96,14 @@ button{
   font-size: 15px;
   background:#a62d2d;
   color:white;
+  
+}
+
+@media screen and (min-width: 1200px)  {
+  input{
+      width: 360px;
+      height: 40px;
+  }
   
 }
 

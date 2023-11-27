@@ -1,15 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #ffffff;
-    color: #000000;
-
-}
-
 .header {
     position: fixed;
     height: 80px;
@@ -51,12 +39,14 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
     padding: 70px 10% 0;
 
 }
 
 .home-content {
-    max-width: 900px;
+    align-items: center;
+    max-width: 400px;
     margin: 20px 0 40px;
     gap: 20px;
 
@@ -72,6 +62,7 @@ body {
 
 }
 
+
 .home-content p {
     font-size: 20px;
     font-weight: 540;
@@ -84,9 +75,9 @@ body {
 
 .button1{
     cursor: pointer;
-    background-color: #026873;
+    background-color: #2D83A6;
     color: white;
-    width: 150px;
+    width: 50%;
     margin-top: 10px;
     height: 40px;
     border: none;
@@ -104,7 +95,7 @@ body {
 
 input {
     display: block;
-    width: 250px;
+    width: 100%;
     height: 40px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -116,4 +107,58 @@ label{
     text-align: left;
     margin-bottom: 5px;
     font-size: 14px;
+}
+
+img{
+    width: 100%;
+    
+}
+
+@media screen and (min-width: 1200px)  {
+    input{
+        width: 400px;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+    img{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1000px)  {
+    input{
+        width: auto;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+    img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px)  {
+    input{
+        width: auto;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+    img{
+        width: 0px;
+    }
+}
+@media screen and (max-width: 460px)  {
+    
+    .logo{
+        font-size: 20px;
+    }
+    .navbar a{
+        font-size: 14px;
+    }
+    
 }

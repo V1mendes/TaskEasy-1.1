@@ -39,14 +39,15 @@ include_once("conexao.php");
 
             <H1> Esqueceu sua senha? </H1>
 
-            <p> Para redefinir sua senha, por favor digite o endereço de email da sua conta </p>
+            <p> Para redefinir sua senha, por favor digite o endereço de email da sua conta para validar a existência da conta. </p>
 
             <form class="center" method="post" action="reset.php">
 
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" required>
-                <input type="submit" value="restaurar" id="rest" name="rest" required>
-
+                <div class="caixa">
+                <button class="button1" type="submit" value="restaurar" id="rest" name="rest" required>Restaurar</button>
+                </div>
             </form>
 
         </div>

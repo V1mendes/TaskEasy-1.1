@@ -45,9 +45,8 @@ if (isset($_SESSION['user_id'])) {
             <input type="password" name="senha" id="senha" required>
 
             <a class="esqueci" href="restaurar.php">Esqueci minha senha</a>
-
-            <input type="submit" class="bt_excluir" value="Entrar" id="entrar" name="entrar">
-
+            <div class="button1">
+            <button type="submit" value="Entrar" id="entrar" name="entrar">Entrar</button></div>
 
         </form>
 

@@ -1,4 +1,7 @@
-.header {
+
+/*NAV*/
+
+header {
     position: fixed;
     height: 80px;
     width: 100%;
@@ -7,7 +10,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .logo {
@@ -15,7 +17,6 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-
 
 }
 
@@ -29,20 +30,25 @@
 
 }
 
-.navbar a:hover,
-.navbar a.active {
+#lgn:hover{
     color: #000000;
+    transition: 0.2s;
 }
 
-header {
-    position: fixed;
-    height: 80px;
-    width: 100%;
-    padding: 40px;
-    background: #026873;
+.navbar a:hover{
+    color: #000000;
+    transition: 0.2s;
+}
+
+/*CONTAINER DE RECUPERAR*/
+
+.center {
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 65vh;
 }
 
 p{
@@ -51,27 +57,15 @@ p{
 }
 
 h1 {
-    margin-top: 80px;
+    margin-top: 100px;
     padding-bottom: 20px;
     padding-top: 80px;
 }
 
-header a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.esqueci{
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    margin-bottom: 10px;
-    
-}
+/*FORMULÁRIO*/
 
 form{
-    width: 40%;
+    width: 60%;
     display: flex;
     flex-direction: column;
 }
@@ -92,33 +86,19 @@ label{
     font-size: 14px;
 }
 
+/*BUTTON*/
+
 .button1{
     cursor: pointer;
-    background-color: #026873;
+    background-color: #2D83A6;
     color: white;
-    margin-top: 20px;
+    margin: 20px;
     width: 50%;
     height: 40px;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     transition: 0.2s background;
-}
-
-.logo {
-    font-size: 30px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.center {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 65vh;
 }
 
 #campos {
@@ -129,16 +109,41 @@ label{
 
 }
 
-#lgn{
-    transition: 0.2s;
-}
-
-#lgn:hover{
-    color: #000000;
-    transition: 0.2s;
-}
-
 button:hover{
     background-color: #057986;
     transition: 0.2s background;
+}
+
+.caixa{
+    align-items: center;
+}
+
+@media screen and (min-width: 1200px)  {
+    input{
+        width: 360px;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 800px)  {
+    input{
+        width: 250px;
+        height: 40px;
+    }
+    form {
+        width: auto;
+    }
+}
+@media screen and (max-width: 460px)  {
+    
+    .logo{
+        font-size: 20px;
+    }
+    .navbar a{
+        font-size: 14px;
+    }
+    
 }

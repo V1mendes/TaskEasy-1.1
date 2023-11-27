@@ -21,4 +21,4 @@ select * from tarefas;
 
 --> Auterando a tabela e adicionando atributo
 ALTER TABLE tarefas
-ADD user_id INT UNIQUE;
+ADD user_id INT;
