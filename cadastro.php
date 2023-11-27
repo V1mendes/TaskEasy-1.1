@@ -2,22 +2,31 @@
 
 include("conexao.php");
 
-$nome_completo = $_POST['nome_completo']; 
-$email = $_POST['email']; 
-$senha = $_POST['senha']; 
+$nome_completo = $_POST['nome_completo'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 
-$sql = "INSERT INTO cadastros(nome_completo, email, senha )
-values ('$nome_completo', '$email', '$senha' )";
+// Verificar se o e-mail já está cadastrado
+$verifica = $conexao->query("SELECT * FROM cadastros WHERE email = '$email'") or die("Erro ao selecionar");
 
-$sql2 = "INSERT INTO tarefas (descricao) VALUES ('$descricao')";
-
-
-if(mysqli_query($conexao, $sql)){
-    header("location: login.php");
-}else{
-    echo "Erro". mysqli_connect_error($conexao);
+if ($verifica->num_rows > 0) {
+    echo "<script language='javascript' type='text/javascript'>
+    alert('E-mail já cadastrado, tente novamente');window.location.href='cada.php';</script>";
+    exit();
 }
 
+// Inserir dados se o e-mail não estiver cadastrado
+$sql = "INSERT INTO cadastros(nome_completo, email, senha) VALUES ('$nome_completo', '$email', '$senha')";
+
+if (mysqli_query($conexao, $sql)) {
+
+    echo "<script language='javascript' type='text/javascript'>
+    alert('Cadastro realizado com sucesso');window.location.href='login.php';</script>";
+
+} else {
+
+    echo "Erro: " . mysqli_error($conexao);
+}
 
 mysqli_close($conexao);
 ?>

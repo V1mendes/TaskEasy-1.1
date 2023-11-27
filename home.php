@@ -60,7 +60,7 @@ if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
 
                 } else {
 
-                    echo "Nenhum resultado encontrado.";
+                    echo "Exemplo: Atividade de Mobile (12/12)";
 
                 }
                 ?>
